@@ -1,0 +1,11 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#1E40AF"/>
+  <text x="200" y="40" text-anchor="middle" fill="white" font-size="24" font-weight="bold">Connect Four</text>
+  <rect x="80" y="60" width="240" height="200" rx="10" fill="#2563EB"/>
+  <circle cx="120" cy="100" r="20" fill="#FCD34D"/><circle cx="170" cy="100" r="20" fill="#EF4444"/>
+  <circle cx="220" cy="100" r="20" fill="#FCD34D"/><circle cx="270" cy="100" r="20" fill="white"/>
+  <circle cx="120" cy="150" r="20" fill="#EF4444"/><circle cx="170" cy="150" r="20" fill="#FCD34D"/>
+  <circle cx="220" cy="150" r="20" fill="#EF4444"/><circle cx="270" cy="150" r="20" fill="white"/>
+  <circle cx="120" cy="200" r="20" fill="#FCD34D"/><circle cx="170" cy="200" r="20" fill="#EF4444"/>
+  <circle cx="220" cy="200" r="20" fill="white"/><circle cx="270" cy="200" r="20" fill="white"/>
+</svg>

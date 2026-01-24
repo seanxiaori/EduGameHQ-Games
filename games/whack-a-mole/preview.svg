@@ -1,0 +1,10 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#10B981"/>
+  <text x="200" y="35" text-anchor="middle" fill="white" font-size="22" font-weight="bold">Whack-a-Mole</text>
+  <ellipse cx="100" cy="200" rx="50" ry="25" fill="#92400E"/>
+  <ellipse cx="200" cy="200" rx="50" ry="25" fill="#92400E"/>
+  <ellipse cx="300" cy="200" rx="50" ry="25" fill="#92400E"/>
+  <circle cx="200" cy="160" r="35" fill="#78350F"/>
+  <circle cx="190" cy="150" r="6" fill="black"/>
+  <circle cx="210" cy="150" r="6" fill="black"/>
+</svg>

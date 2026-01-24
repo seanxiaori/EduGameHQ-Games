@@ -1,0 +1,13 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#6B7280"/>
+  <text x="200" y="30" text-anchor="middle" fill="white" font-size="22" font-weight="bold">Minesweeper</text>
+  <rect x="60" y="50" width="280" height="200" fill="#9CA3AF"/>
+  <rect x="70" y="60" width="35" height="35" fill="#D1D5DB"/>
+  <rect x="115" y="60" width="35" height="35" fill="#6B7280"/>
+  <text x="132" y="88" text-anchor="middle" fill="#3B82F6" font-size="20" font-weight="bold">1</text>
+  <rect x="160" y="60" width="35" height="35" fill="#6B7280"/>
+  <text x="177" y="88" text-anchor="middle" fill="#10B981" font-size="20" font-weight="bold">2</text>
+  <rect x="205" y="60" width="35" height="35" fill="#D1D5DB"/>
+  <rect x="250" y="60" width="35" height="35" fill="#EF4444"/>
+  <text x="267" y="88" text-anchor="middle" fill="white" font-size="18">💣</text>
+</svg>

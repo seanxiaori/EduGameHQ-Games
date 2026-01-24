@@ -1,0 +1,10 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#7C3AED"/>
+  <text x="200" y="35" text-anchor="middle" fill="white" font-size="22" font-weight="bold">Memory Match</text>
+  <rect x="60" y="60" width="60" height="80" rx="8" fill="#A78BFA"/>
+  <rect x="140" y="60" width="60" height="80" rx="8" fill="white"/>
+  <text x="170" y="110" text-anchor="middle" font-size="36">🍕</text>
+  <rect x="220" y="60" width="60" height="80" rx="8" fill="#A78BFA"/>
+  <rect x="300" y="60" width="60" height="80" rx="8" fill="white"/>
+  <text x="330" y="110" text-anchor="middle" font-size="36">🍔</text>
+</svg>
