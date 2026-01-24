@@ -1,0 +1,199 @@
+/* The < *, > is eveyrthing selector
+the *::before selects all things with same pseudo element
+and same for *::after to allow us to have.... TODO 
+*/ 
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+/* Allows for global declarations, cascade can overwrite */
+
+:root{
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * .9);
+}
+
+body {
+    margin: 0;
+}
+
+.board {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto)
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid rgb(182, 109, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------
+Up to this point I'm the same as tutorial but can explain
+
+Below takes out the borders on the edges of every cell */
+/* Cannot explain the use of "3n +1" my code below */
+.cell:first-child {
+    border-top: none;
+    border-left: none;
+}
+.cell:nth-child(2) {
+    border-top: none;
+}
+.cell:nth-child(3) {
+    border-top: none;
+    border-right: none;
+}
+.cell:nth-child(4) {
+    border-left: none;
+}
+.cell:nth-child(6) {
+    border-right: none;
+}
+.cell:nth-child(7) {
+    border-bottom: none;
+    border-left: none;
+}
+.cell:nth-child(8) {
+    border-bottom: none;
+}
+.cell:nth-child(9) {
+    border-bottom: none;
+    border-right: none;
+}
+
+/* Verifying from this point on that the CSS matches */
+
+.cell.o,
+.cell.x { 
+    cursor: not-allowed;
+}
+
+/* Design for the x */
+/* Two elements simply rotated 45 degrees */
+.cell.x::before {
+    content: '';
+    position: absolute;
+    width: calc(var(--mark-size) * .15); 
+    height: var(--mark-size);
+    background-color: black;
+} 
+.cell.x::after {
+    content: '';
+    position: absolute;
+    width: calc(var(--mark-size) * .15); 
+    height: var(--mark-size);
+    background-color: black;
+}
+
+.cell.x::before,
+.board.x .cell:hover::before {
+    transform: rotate(45deg);
+}
+.cell.x::after,
+.board.x .cell:hover::after {
+    transform: rotate(-45deg);
+}
+
+
+/* Design for the cirlce:  [153-168] */
+.cell.o::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: black;
+}
+.cell.o::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: calc(var(--mark-size) * .70);
+    height: calc(var(--mark-size) * .70);
+    background-color: white;
+}
+
+/* to make x when hovering cursor during x turn */
+/* space after <.board.x > means go to child */
+.board.x .cell:not(.x):not(.o):hover::before {
+    content: '';
+    position: absolute;
+    width: calc(var(--mark-size) * .15); 
+    height: var(--mark-size);
+    background-color: grey;
+    transform: rotate(45deg);
+}
+.board.x .cell:not(.x):not(.o):hover::after {
+    content: '';
+    position: absolute;
+    width: calc(var(--mark-size) * .15); 
+    height: var(--mark-size);
+    background-color: grey;
+    transform: rotate(-45deg);
+}
+
+/* to make o when hovering cursor during o's turn */
+/* space after <.board.o > means go to child */
+.board.o .cell:not(.x):not(.o):hover::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: grey;
+}
+.board.o .cell:not(.x):not(.o):hover::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: calc(var(--mark-size) * .70);
+    height: calc(var(--mark-size) * .70);
+    background-color: white;
+}
+
+/* page and message when you win */
+.winning-message {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 80px;
+    flex-direction: column;
+}
+
+.winning-message button {
+    font-size: 30px;
+    background-color: lightgreen;
+    border: 0.5em 0.5em;
+    padding: 10px;
+}
+
+.winning-message button:hover {
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    border: 0.5em 0.5em;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.winning-message.show {
+    display: flex;
+}
