@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#2d5a27"/>
+  <circle cx="40" cy="100" r="15" fill="#4ade80"/>
+  <circle cx="70" cy="100" r="15" fill="#4ade80"/>
+  <circle cx="100" cy="100" r="15" fill="#4ade80"/>
+  <circle cx="130" cy="100" r="15" fill="#4ade80"/>
+  <circle cx="160" cy="100" r="15" fill="#4ade80"/>
+  <circle cx="160" cy="100" r="12" fill="#22c55e"/>
+  <circle cx="155" cy="95" r="3" fill="#000"/>
+  <circle cx="165" cy="95" r="3" fill="#000"/>
+  <rect x="85" y="140" width="30" height="30" fill="#ef4444" rx="5"/>
+  <text x="100" y="40" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">SNAKE</text>
+</svg>
