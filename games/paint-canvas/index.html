@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 - Paint by Nicoară Antonia</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="instumente">
+        <div class="sectiune_intrumente">
+          <label class="titlu">Forme</label>
+          <ul class="forme">
+            <li class="forme_opt" id="elipsa">
+              <img src="media/elipsa.png" alt="" />
+              <span>Elipsă</span>
+            </li>
+            <li class="forme_opt" id="dreptunghi">
+              <img src="media/dreptunghi.png" alt="" />
+              <span>Dreptunghi</span>
+            </li>
+            <li class="forme_opt" id="linie">
+              <img src="media/linie.png" alt="" />
+              <span>Linie</span>
+            </li>
+            <li class="forme_opt" id="pensula">
+              <img src="media/pensula.png" alt="" />
+              <span>Pensulă</span>
+            </li>
+          </ul>
+        </div>
+        <div class="sectiune_optiuni">
+          <label class="titlu">Opțiuni</label>
+          <ul class="optiuni">
+            <li class="optiuni">
+              <label for="stroke">Culoare exterioară formă</label>
+              <input id="cul_ext" name="stroke" type="color" />
+            </li>
+            <li class="optiuni">
+              <label for="stroke">Culoare umplere formă</label>
+              <input id="cul_ump" name="stroke" type="color" />
+            </li>
+            <li class="optiuni">
+              <label for="lineWidth">Grosime linie</label>
+              <input id="lineWidth" name="lineWidth" type="number" value="5" />
+            </li>
+            <li class="optiuni">
+              <label for="stroke">Background canvas</label>
+              <input id="back_canvas" name="stroke" type="color" />
+            </li>
+          </ul>
+        </div>
+        <div class="butoane">
+          <button id="sterge-figura">Șterge figura</button>
+          <button id="clear">Curăță canvas</button>
+          <button id="save-png">Salvare PNG</button>
+          <button id="save-svg">Salvare SVG</button>
+        </div>
+      </section>
+      <section class="drawing-board">
+        <canvas id="canvas" width="800" height="600"></canvas></canvas>
+      </section>
+    </div>
+  </body>
+</html>
