@@ -1,0 +1,67 @@
+// ========== GRADUAL MENU BACKGROUND APPEAR ==========
+@keyframes background-appear {
+  0% {
+    opacity: 0;
+    width: 10rem;
+  }
+  100% {
+    opacity: 1;
+    width: 55rem;
+  }
+}
+
+// ========== GRADUAL APPEAR ANIMATION (FOOTER & MENU TITLE) ==========
+@keyframes display-delay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Slide in animations inspired by Jonas Schmedtmann's Advanced CSS Udemy Course
+// ========== SLIDE IN FROM LEFT ANIMATION (PLAY GAME BUTTON) ==========
+@keyframes appear-left {
+  0% {
+    transform: translateX(-1000%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+// ========== SLIDE IN FROM LEFT ANIMATION (ABOUT BUTTON) ==========
+@keyframes appear-right {
+  0% {
+    transform: translateX(1000%);
+  }
+
+  75% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes endgame-screen-blur {
+  0% {
+    backdrop-filter: none;
+  }
+  100% {
+    backdrop-filter: blur(2px);
+  }
+}
+
+@keyframes endgame-modal-appear {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 50%;
+  }
+}

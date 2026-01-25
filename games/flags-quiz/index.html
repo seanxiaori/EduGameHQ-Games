@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn countries flags playing this flags quiz">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Flags quiz</title>
+</head>
+<body>
+    <h1>Flags quiz</h1>
+
+    <div class="game-area">
+        <div class="controls-area">
+            <button data-type="flag" class="btn"> 
+                Get a flag <i class="fa-solid fa-flag"></i>
+            </button>
+            <button data-type="rules" class="btn" id="modal"> 
+                How to play <i class="fa-regular fa-circle-question"></i>
+            </button>
+        </div>
+        <div id="openModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                    <h2>To check your knowledge of flags: </h2>
+                        <ol>
+                            <li>Click on the button "GET A FLAG <i class="fa-solid fa-flag"></i>" 
+                            or simply tap on the photo of a flag to get a new flag.</li>
+                        
+                            <li>Type the name of the country you think this flag belongs to.</li>
+                        
+                            <li>Click on "Verify <i class="fa-solid fa-check"></i>" button.</li>
+                        
+                            <li>If you got it right, you'll get a message and your score will increase.</li>  
+                        </ol>  
+            </div>
+        </div>
+        <div id="finish-modal" class="modal">
+            <div class="modal-content" id="finish-modal-div">
+                <span class="close">&times;</span>
+                    <h2>Good job!</h2>
+                    <p id="text">You have got <span id="final-score"></span> correct answers.
+                    <br>
+                    Try again, next time you'll get more.
+                </p>
+            </div>
+        </div>
+        <div class="question">
+            <div id="image" onclick="displayFlagImage()">
+            
+            </div>
+            <input type="text" placeholder="Type the country" required id="answer-box">
+            <button data-type="submit" class="btn">
+                Verify <i class="fa-solid fa-check"></i>
+            </button>
+        </div>
+        <button data-type="finish" class="btn" id="finish">Finish quiz</button>
+    </div>
+    <div class="score-area">
+        <p class="scores">Correct answers: <span id="correct">  0</span></p>
+        <p class="scores">Incorrect answers: <span id="incorrect">  0</span></p>
+    </div>
+   
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/90849b1530.js" crossorigin="anonymous"></script>  
+</body>
+</html>

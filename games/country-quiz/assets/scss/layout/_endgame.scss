@@ -1,0 +1,155 @@
+// ========== ENDGAME / MODAL STYLING ==========
+.endgame {
+  display: none;
+  position: absolute;
+  // backdrop filter code from https://css-tricks.com/almanac/properties/b/backdrop-filter/
+  backdrop-filter: blur(2px);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  // ========== MODAL ELEMENT STYLING ==========
+  &__modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    @include absCenter;
+    width: 90%;
+    max-width: 900px;
+    height: 50rem;
+    max-height: 80%;
+    // Add a glass effect to end game modal
+    background-color: rgba($color-primary, 0.9);
+    border: solid 2px $color-white;
+    z-index: 10;
+    @include respond(tablet) {
+      height: 65rem;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+    @include respond(desktop) {
+      height: 80rem;
+    }
+    @include respond(big-desktop) {
+      height: 70rem;
+      max-width: 1400px;
+    }
+  }
+  // ========== SCORE & HIGH SCORE STYLING ==========
+  &__scores {
+    display: flex;
+    justify-content: space-between;
+    &-box {
+      padding: 1rem;
+      & > * {
+        font-family: $font-default;
+        font-weight: 700;
+      }
+      &--text {
+        font-size: 2rem;
+        color: $color-white;
+        @include respond(tablet) {
+          font-size: 2.75rem;
+        }
+      }
+      &--number {
+        font-size: 3.5rem;
+        color: $color-secondary;
+        @include respond(tablet) {
+          font-size: 4.5rem;
+        }
+      }
+    }
+  }
+  &__high-score {
+    &--text {
+      font-size: 3rem;
+      color: $color-secondary;
+      display: none;
+    }
+  }
+  // ========== PLAY AGAIN, CHANGE RULES & EXIT BUTTON STYLING==========
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &--btn {
+      // Unique Styling for endgame buttons
+      font-size: 1.5rem;
+      margin: 0 1.25rem 1rem 1.25rem;
+      padding: 1.5rem 0.5rem;
+      background-color: rgba($color-primary, 0.9);
+      @include respond(tablet) {
+        width: 80%;
+        margin: 2rem auto;
+        font-size: 2rem;
+      }
+      @include respond(small-desk-plus) {
+        width: 50%;
+      }
+    }
+  }
+  // ========== FACEBOOK AND TWITTER LINKS STYLING ==========
+  &__social {
+    // SHARE YOUR SCORE text
+    &--text {
+      font-size: 3.5rem;
+      color: $color-white;
+      @include respond(tablet) {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    &--link {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      place-items: center;
+      font-size: 1.6rem;
+      margin: 1rem;
+      width: 17.5rem;
+      text-decoration: none;
+      font-family: $font-default;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+      border-radius: 0.2rem;
+      border: 0.2rem solid transparent;
+      @include respond(tablet) {
+        font-size: 2.25rem;
+      }
+      &:focus,
+      &:hover,
+      &:active {
+        border: solid 0.2rem $color-white;
+      }
+
+      & > i {
+        font-size: 2rem;
+        margin: 0.5rem;
+        @include respond(tablet) {
+          font-size: 3rem;
+        }
+      }
+    }
+    @include respond(tablet) {
+      justify-content: space-between;
+    }
+    @include respond(small-desk) {
+      padding: 0 3rem;
+    }
+  }
+}
+// Setting social media brand colors to buttons
+#facebook-share {
+  background-color: #3b5998;
+}
+#twitter-share {
+  background-color: #1da1f2;
+}

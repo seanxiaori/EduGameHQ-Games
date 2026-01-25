@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Game Screen for the Country Quiz App " />
+    <title>Country Quiz - Play Game</title>
+    <meta property="og:title" content="Country Quiz - Play Game" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cjcon90.github.io/country-quiz/game.html" />
+    <meta property="og:image" content="https://res.cloudinary.com/cjcon90/image/upload/v1607460857/codeinstitute/country-quiz/country-quiz-menu-image.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+  </head>
+  <body>
+    <main class="game">
+      <!-- SELECT REGION PAGE -->
+      <section class="game__section" id="region">
+        <div class="game__section--heading">
+          <h1 class="game__section--heading-text heading-secondary">select region</h1>
+        </div>
+        <div class="region__options game__section--options">
+          <button class="region__options--button btn" id="region-africa" value="africa">Africa</button>
+          <button class="region__options--button btn" id="region-asia" value="asia">Asia</button>
+          <button class="region__options--button btn" id="region-americas" value="americas">Americas</button>
+          <button class="region__options--button btn" id="region-europe" value="europe">Europe</button>
+          <button class="region__options--button btn" id="region-oceania" value="oceania">Oceania</button>
+          <button class="region__options--button btn" id="region-world" value="world">World</button>
+        </div>
+      </section>
+      <!-- SELECT DIFFICULTY PAGE -->
+      <section class="game__section" id="difficulty">
+        <div class="game__section--heading">
+          <h1 class="game__section--heading-text heading-secondary">select difficulty</h1>
+        </div>
+        <div class="difficulty__options game__section--options">
+          <button class="difficulty__options--button btn" id="difficulty-easy" value="easy">easy</button>
+          <button class="difficulty__options--button btn" id="difficulty-medium" value="medium">medium</button>
+          <button class="difficulty__options--button btn" id="difficulty-hard" value="hard">hard</button>
+          <button class="difficulty__options--button btn" id="difficulty-expert" value="expert">expert</button>
+        </div>
+      </section>
+      <!-- MAIN GAME PAGE -->
+      <section class="game__section" id="game">
+        <div class="counters">
+          <div class="counters__progress">
+            <p class="counters__progress--text">Country:</p>
+            <p class="counters__progress--text"><span id="progress-count">1</span> / 5</p>
+          </div>
+          <div class="counters__score">
+            <p class="counters__score--text">Score:</p>
+            <p class="counters__score--text" id="score-count">0</p>
+          </div>
+        </div>
+        <div class="flag">
+          <img src="#" alt="country flag" class="flag__img" id="flag" />
+        </div>
+        <p class="question" id="question">Question</p>
+        <input type="text" class="question__input" id="question-input" />
+        <div class="question__buttons">
+          <button class="question__buttons--button" id="pop1" tabindex="0">PopulationNum</button>
+          <button class="question__buttons--button" id="pop2" tabindex="0">PopulationNum</button>
+          <button class="question__buttons--button" id="pop3" tabindex="0">PopulationNum</button>
+        </div>
+
+        <div class="answer" id="answer-box">
+          <p class="answer__result heading-secondary" id="answer-result">Correct!!</p>
+          <p class="answer__answer heading-secondary" id="correct-answer">The correct Answer is ${Country Name}</p>
+        </div>
+
+        <div class="game-buttons">
+          <!-- correct answer audio source: https://www.zapsplat.com/music/bell-chime-notification-high-pitched-metallic-good-for-apps-games-and-other-ui-3/ -->
+          <audio src="assets/sounds/correct.mp3" id="correct-audio"></audio>
+          <!-- correct answer + Bonus audio source: https://www.zapsplat.com/music/notification-alert-bell-chime-good-for-alerting-user-of-event-or-message-etc-4/ -->
+          <audio src="assets/sounds/correct-bonus.mp3" id="bonus-audio"></audio>
+          <!-- Wrong answer audio source: https://www.zapsplat.com/music/game-error-tone-1/ -->
+          <audio src="assets/sounds/wrong.mp3" id="wrong-audio"></audio>
+          <button class="game-buttons__submit btn" id="submit-button">Submit</button>
+          <button class="game-buttons__next btn" id="next-button" disabled>Next</button>
+        </div>
+      </section>
+      <!-- END GAME / RESULTS PAGE &   MODAL -->
+      <section class="endgame">
+        <div class="endgame__modal">
+          <div class="endgame__scores">
+            <div class="endgame__scores-box">
+              <p class="endgame__scores-box--text heading-secondary">Final Score</p>
+              <p class="endgame__scores-box--number heading-primary" id="new-score">80</p>
+            </div>
+            <div class="endgame__scores-box">
+              <p class="endgame__scores-box--text heading-secondary">High Score</p>
+              <p class="endgame__scores-box--number heading-primary" id="high-score">80</p>
+            </div>
+          </div>
+          <div class="endgame__high-score">
+            <p class="endgame__high-score--text heading-secondary">New High Score!</p>
+          </div>
+          <div class="endgame__buttons">
+            <button class="endgame__buttons--btn btn" id="play-again">Play Game Again</button>
+            <a href="game.html" class="endgame__buttons--btn btn">Change Region/Difficulty</a>
+            <a href="index.html" class="endgame__buttons--btn btn">Exit Game</a>
+          </div>
+          <div class="endgame__social">
+            <p class="endgame__social--text heading-secondary">Share Your Score!</p>
+            <div class="endgame__social-links">
+              <!-- code for creating a facebook share button with custom text from this post: https://stackoverflow.com/a/45892041 -->
+              <a
+                href="https://www.facebook.com/sharer/sharer.php?u=https://cjcon90.github.io/country-quiz/&quote=#"
+                target="_blank"
+                rel="noopener"
+                class="endgame__social-links--link"
+                id="facebook-share"
+                ><i class="fab fa-facebook-square"></i>
+                <p>Facebook</p></a
+              >
+              <!-- code for creating a facebook share button with custom text from this twitter guide https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent -->
+              <a
+                href="https://twitter.com/intent/tweet?text=#&url=https://cjcon90.github.io/country-quiz/"
+                target="_blank"
+                rel="noopener"
+                class="endgame__social-links--link"
+                id="twitter-share"
+                ><i class="fab fa-twitter-square"></i>
+                <p>Twitter</p></a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- High Score sound source: https://www.zapsplat.com/music/game-tone-bright-and-warm-synth-win-award-1/ -->
+        <audio src="assets/sounds/high-score.mp3" id="high-score-audio"></audio>
+        <!--  Perfect score sound source: https://www.zapsplat.com/music/game-tone-bright-warm-and-magical-win-award-or-level-up/ -->
+        <audio src="assets/sounds/perfect-score.mp3" id="perfect-score-audio"></audio>
+        <footer class="footer footer--endgame">
+          <p class="footer__text">
+            Page Created by <a href="https://cjcon90.dev" target="_blank" rel="noopener" class="footer__text--link">Ciaran Concannon</a>
+          </p>
+        </footer>
+      </section>
+    </main>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+html {
+  box-sizing: border-box;
+  // Setting default font to 62.5% so that 1rem = 10px inspired by Jonas Schmedtmann Advanced CSS & Sass Udemy Course
+  font-size: 62.5%;
+  @include respond(tablet) {
+    font-size: 70%;
+  }
+  @include respond(big-desktop) {
+    font-size: 130%;
+  }
+}
+
+body {
+  /* Fix for height changes in mobile browsers from: https://css-tricks.com/the-trick-to-viewport-units-on-mobile*/
+  /* Fallback for browsers that do not support Custom Properties */
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: $color-primary;
+}
+
+// CSS Reset sourced from digitalocean minimal CSS reset: https://www.digitalocean.com/community/tutorials/css-minimal-css-reset"
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}

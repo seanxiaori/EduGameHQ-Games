@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Guess the Capital Cities</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header>
+		<h1>Which country's capital city is named
+			<br>
+			<span id="capitalDisplay"></span> 
+			?
+		</h1>
+	</header>
+   
+	<div id="container-answers">
+
+	
+		<div class="options">
+			<span class="selected" id="choice1"></span>
+			<img class="flag-image">
+		</div>
+		<div class="options">
+			<span class="selected" id="choice2"></span>
+			<img class="flag-image">
+		</div>
+		<div class="options">
+			<span class="selected" id="choice3"></span>
+			<img class="flag-image">
+		</div>
+		<div class="options">
+			<span class="selected" id="choice4"></span>
+			<img class="flag-image">
+		</div>
+		<div class="options"><span class="selected" id="choice5"></span>
+			<img class="flag-image">
+		</div>
+		<div class="options"><span class="selected" id="choice6"></span>
+			<img class="flag-image">
+		</div>
+		
+
+	</div>
+	<span id="message"></span>
+	<span id="answer-streak"></span>
+
+	<div class="container-settings">
+		
+		<div class="dropdown">
+			<button class="dropbtn">Difficulty</button>
+
+			<div class="dropdown-content">
+				<ul>
+					<li> <button class= "mode">Easy</button>  </li> 
+					<li> <button class= "mode clicked-dif">Medium</button> </li> 
+					<li> <button class= "mode">Hard</button> </li> 
+				</ul>	
+			</div>
+		  </div>
+		<button id="restart">Restart</button>		
+	</div>
+
+</div>
+
+	<script src="script.js"></script>
+	
+</body>
+</html>

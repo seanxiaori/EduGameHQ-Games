@@ -1,0 +1,168 @@
+body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #31384d;
+    text-align: center;
+}
+h1 {
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+.game-area {
+    background-color:  #97c2f0;
+    box-sizing: border-box;
+    width: 80%;
+    height: 80vh;
+    max-height: 500px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    padding: 15px;
+}
+.controls-area {
+    width: 50%;
+    margin: 0 auto;
+}
+.btn {
+    width: 180px;
+    height: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    background-color: white;
+    color: #31384d;
+    border: 1px solid #46506e;
+    border-radius: 30px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.btn:active,
+.btn:hover {
+    background-color: #e2e9f1;
+}
+#finish {
+    background-color: #5f7894;
+    color: white;
+    margin: 10px auto;
+}
+.img {
+    width: 250px;
+    height: 250px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: #31384d;
+    margin: 10px auto;
+    padding: 2px;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+input {
+    background-color: white;
+    color: #31384d;
+    border: 1px solid #46506e;
+    border-radius: 30px;
+    line-height: 2em;
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #31384d;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+#correct {
+    color: rgb(3, 116, 3);
+    font-weight: bold;
+}
+#incorrect {
+    color: rgb(139, 3, 3);
+    font-weight: bold;
+}
+.score-area {
+    margin: 10px auto;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    overflow: auto;
+    margin: 0 auto;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 10px;
+    border: 1px solid #31384d;
+    border-radius: 30px;
+    width: 75%; 
+    text-align: left;
+    line-height: 1.5em;
+}
+h2 {
+    text-align: center;
+}
+.close {
+    color: #aaa;
+    float: right;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #31384d;;
+    text-decoration: none;
+    cursor: pointer;
+}
+#finish-modal {
+    margin: 0 auto;
+    width: 55%;
+}
+#finish-modal-div {
+    height: 200px;
+    margin: 20px auto;
+    padding-top: 20px;   
+}
+#text {
+    text-align: center;
+}
+#final-score {
+    font-weight: bold;
+    color: #46506e;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    .game-area {
+        width: 100%;
+        max-height: 550px;
+    }
+    .controls-area {
+        width: 70%;
+    }
+    .modal {
+        width: 90%;
+    }
+    .modal-content {
+        width: 90%; 
+    }
+    .btn {
+        margin: 15px auto;
+    }
+    .score-area {
+        margin: 70px auto;
+    }
+    #finish-modal {
+        width: 85%;
+    }
+}

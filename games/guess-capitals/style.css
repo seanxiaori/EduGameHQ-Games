@@ -1,0 +1,251 @@
+
+:root {
+    --main-bg-color: 	#243447;
+    --primary-text-color: white;
+  }
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--main-bg-color);
+    font-family: 'Lato', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+}
+
+header{
+    padding-top: 50px;
+}
+
+.flag-image{
+    height: 37px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.options{
+    background: #2A3346;
+    color: var(--primary-text-color);
+    font-size: 27px;
+    cursor:pointer;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    width: 60%;
+    /* transition-duration: 0.2s; */
+    /* transition: all 0.1s ease-out; */
+    transition:all 0.4s ease-in-out;
+    text-align: center;
+    border: 2px dashed black;
+    padding: 7px;
+}
+
+.options:hover {
+    opacity: 0.7;
+    transition:all 0.1s ease-in-out;
+	box-shadow: 0 0 10px white;
+    /* transform: scale(1.05);  */
+}
+
+#container-answers{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+button{
+    text-decoration: none;
+    font-size: 16px;
+    cursor:pointer;
+}
+
+h1{
+    padding: 20px 0;
+	line-height: 1.1;
+	text-align: center;
+	color: var(--primary-text-color);
+    font-weight: normal;
+    font-size: 35px;
+	margin: 0 auto;
+	text-transform: uppercase;
+}
+
+.correct{
+    border: 1px solid green;
+    pointer-events: none;
+}
+
+.incorrect{
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.clicked{
+    pointer-events: none;
+    border-width: 5px;
+    transition: ease-in-out;
+    border-style: solid;
+    font-weight: 800;
+    cursor: not-allowed;
+    box-shadow: 0 0 20px white;
+}
+
+.clicked-dif{
+    text-decoration: underline;
+    pointer-events: none;
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/*  */
+
+#restart{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 27px;
+}
+
+.container-settings{
+    display: flex;
+    margin-top: 50px;
+    justify-content: right;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: var(--main-bg-color);
+    color: black;
+    padding: 16px;
+    cursor:pointer;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    min-width: max-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .mode{
+      background-color: #243447;
+      border: none;
+      color: whitesmoke;
+      font-size: 27px;
+      margin-bottom: 10px;
+  }
+
+  .mode:hover {opacity: 0.4}
+
+
+
+.dropbtn{
+    font-size: 30px;
+    cursor:pointer;
+    color: white;
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: 	#1b4445;
+    cursor:pointer;
+}
+
+#restart:hover {
+    background-color: 	#1b4445;
+    cursor:pointer;
+}
+
+#message{
+    margin-top: 40px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+}
+
+#answer-streak{
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    display: block;
+    padding: none;
+    margin: none;
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 768px){
+
+ h1{
+    font-size: 20px;
+ }
+   
+.options{
+    font-size: 14px;
+} 
+
+.flag-image{
+    height: 14px;
+    width: auto;
+}
+
+button{
+    font-size: 14px;
+}
+
+.mode, .dropbtn{
+    font-size: 15px;
+}
+
+#restart, #message, #answer-streak{
+    font-size: 15px;
+}
+
+.container-settings{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+header{
+    padding-top: 14px;
+}
+
+.options{
+    margin-top: 18px;
+}
+
+.clicked{
+    border: 2px solid black;
+}
+
+#container-answers{
+    margin-top: 8px;
+}
+br{
+    display: none;
+}
+
+}
+

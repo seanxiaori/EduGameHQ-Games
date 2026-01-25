@@ -1,0 +1,34 @@
+// ========== STYLING FOR MENU & ABOUT HEADERS ==========
+.header {
+  position: relative;
+  height: 35%;
+  z-index: 10;
+  background-color: transparent;
+
+  @include respond(small-desk) {
+    height: 15%;
+  }
+  // ========== ABOUT HEADER SPECIFIC STYLING ==========
+  &--about {
+    height: 15%;
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
+
+  // ========== HEADER TITLES ==========
+  &__title {
+    &--menu,
+    &--about {
+      /* To center the text within the heading */
+      @include absCenter;
+      text-transform: uppercase;
+    }
+    // ========== MAIN MENU TITLE ==========
+    &--menu {
+      color: $color-secondary;
+      text-shadow: 1px 1px 2px $color-white;
+      padding-top: 5rem;
+      animation: display-delay 4s 0.25s both ease-in-out;
+    }
+  }
+}

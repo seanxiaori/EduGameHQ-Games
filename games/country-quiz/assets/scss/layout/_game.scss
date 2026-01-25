@@ -1,0 +1,272 @@
+.game {
+  position: relative;
+  height: 100%;
+  // ========== GENERAL STYLING FOR GAME SECTIONS (REGION | DIFFICULTY | GAME) ==========
+  &__section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    background-color: $color-primary;
+    &--heading {
+      position: relative;
+      height: 15%;
+      background-color: $color-secondary;
+      color: $color-primary;
+      width: 100%;
+      &-text {
+        /* To center the text perfectly within the heading */
+        @include absCenter;
+        text-transform: uppercase;
+      }
+    }
+    // ========== LAYOUT STYLING FOR REGION AND DIFFICULTY OPTION BUTTONS ==========
+    &--options {
+      height: 85%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      max-width: 600px;
+      margin: auto;
+      & > button {
+        width: 20rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Initially setting difficulty and game sections not to appear until region has been selected
+#difficulty,
+#game {
+  display: none;
+}
+
+// ========== STYLING FOR PROGRESS AND SCORE COUNTERS ==========
+.counters {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: $font-default;
+  background-color: $color-secondary;
+  color: $color-primary;
+  @include respond(small-desk-plus) {
+    padding: 1rem 25%;
+  }
+  //Make all siblings of the counters have a set max-width. Source for code: https://www.w3schools.com/css/css_combinators.asp
+  & ~ * {
+    margin: 0 auto;
+    max-width: 700px;
+
+    @include respond(desktop) {
+      max-width: 900px;
+    }
+    @include respond(big-desktop) {
+      max-width: 1400px;
+    }
+  }
+  @include respond(tablet) {
+    font-size: 2.25rem;
+  }
+  &__progress--text,
+  &__score--text {
+    font-weight: 600;
+  }
+
+  &__score {
+    text-align: right;
+  }
+}
+// ========== STYLING FOR MAIN FLAG IMAGE ==========
+.flag {
+  margin: 0 auto;
+  height: 25rem;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  // to place items perfectly within flag div. code source: https://dev.to/cjcon90/the-art-of-centering-3epe
+  display: grid;
+  place-items: center;
+  @include respond(tablet) {
+    height: 35rem;
+    width: 100%;
+  }
+  @include respond(small-desk) {
+    height: 25rem;
+    max-width: 600px;
+  }
+  @include respond(desktop) {
+    height: 40rem;
+    max-width: 800px;
+  }
+  @include respond(big-desktop) {
+    height: 50rem;
+    max-width: 1400px;
+  }
+
+  &__img {
+    object-fit: cover;
+    margin: 0 auto;
+    max-width: 80%;
+    max-height: 100%;
+    box-shadow: 0 0 1rem rgba($color-black, 0.4);
+    border: solid 0.2rem $color-white;
+    // fix for Nepal on small desktop screens
+    @include respond(small-desk) {
+      height: 100%;
+    }
+    @include respond(big-desktop) {
+      max-width: 100%;
+    }
+  }
+}
+// ========== STYLING FOR QUESTION & ANSWER INPUT / SELECTION ==========
+.question {
+  font-size: 2rem;
+  font-family: $font-default;
+  text-align: center;
+  color: $color-white;
+  font-weight: 500;
+  padding: 1rem;
+  @include respond(tablet) {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  // TEXT INPUT STYLING
+  &__input {
+    margin: 0 auto;
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+    font-family: $font-default;
+    width: 85%;
+    background-color: $color-primary;
+    border: solid 0.2rem rgba($color-secondary, 0.8);
+    border-radius: 0.4rem;
+    color: $color-white;
+    transition: all 0.2s;
+    @include respond(tablet) {
+      font-size: 2rem;
+    }
+    &:focus,
+    &:active {
+      background-color: rgba($color-white, 0.1);
+      border-color: $color-secondary;
+      box-shadow: 0 0 1rem rgba($color-white, 0.2);
+    }
+  }
+  // POPULATION BUTTON SELECTION STYLING
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    &--button {
+      display: none;
+      outline: none;
+      border: none;
+      border-right: 0.2rem solid $color-secondary;
+      background-color: $color-primary;
+      color: $color-white;
+      width: 33%;
+      font-family: $font-default;
+      font-size: 1.6rem;
+      padding: 1rem 2.5vw;
+      transition: all 0.2s;
+      @include respond(tablet) {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        padding: 1rem 3rem;
+      }
+      @include respond(small-desk) {
+        padding: 1rem 5rem;
+      }
+      &:last-of-type {
+        border: none;
+      }
+      &:active,
+      &:focus,
+      &:target {
+        color: $color-secondary;
+        background-color: rgba($color-white, 0.1);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// ========== STYLING FOR CORRECT / WRONG TEXT ==========
+
+.answer {
+  &__result {
+    font-family: $font-default;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0;
+    font-size: 3rem;
+    @include respond(tablet) {
+      font-size: 4.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &__answer {
+    font-family: $font-default;
+    text-transform: none;
+    display: none;
+    font-size: 2rem;
+    @include respond(tablet) {
+      font-size: 2.5rem;
+    }
+    &--country {
+      font-size: 2.25rem;
+      font-weight: 600;
+      font-style: italic;
+      @include respond(tablet) {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+// ========== STYLING FOR SUBMIT AND NEXT BUTTONS ==========
+.game-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  & > * {
+    // Unique styling for submit and next buttons
+    margin: 1rem;
+    width: 15rem;
+    color: $color-primary;
+    background-color: $color-secondary;
+    border: solid 0.2rem transparent;
+    @include respond(tablet) {
+      margin: 3rem;
+      width: 20rem;
+    }
+    @include respond(small-desk) {
+      margin: 2rem 0;
+    }
+    @include respond(desktop) {
+      margin: 3rem 0;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      border: solid 0.2rem $color-white;
+      color: $color-white;
+      font-weight: 700;
+      font-size: 2.1rem;
+    }
+    &:disabled {
+      color: $color-primary;
+      background-color: $color-secondary;
+      border: none;
+    }
+  }
+}
