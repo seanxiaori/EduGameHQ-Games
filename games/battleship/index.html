@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Battleship</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">BATTLESHIP</h1>
+    </header>
+
+    <main>
+      <div class="notification-wrapper hide">
+        <div class="notification">
+          <h1 id="winner"></h1>
+          <button class="rematch">Play again</button>
+        </div>
+      </div>
+
+      <div class="container" id="name-div">
+        <label for="player-name">Enter your name </label>
+        <input type="text" id="player-name">
+      </div>
+      
+      <div class="container" id="buttons">
+        <button id="start-game-button">Start Game</button>
+        <button id="rotate-ships">Rotate Ships</button>
+        <button id="randomize">Randomize Ships</button>
+      </div>
+      
+      <div id="info">
+        <h3 id="turn">Place Your Ships</h3>
+        <h3 id="result"></h3>
+      </div>
+      
+      <div class="grid-display">
+      </div>
+      
+      
+      <div class="container">
+        <div id="board-names">
+          <h2>Your Board</h2>
+          <h2>Opponent's Board</h2>
+        </div>
+        <div id="grids">
+          <div id="user-ships"></div>
+          <div class="grid grid-user"></div>
+          <div class="grid grid-computer"></div>
+          <div id="opponent-ships"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="chat">
+          <div id="chat-text"></div>
+          <div id="chat-input">
+            <input type="text" id="msg-text" placeholder="Send a message...">
+            <input type="button" id="msg-button" value="SEND">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <button id="restart">Restart Game</button>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script> 
+</html>
