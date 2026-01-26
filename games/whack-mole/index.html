@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whack-A-Mole</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Start Screen -->
+  <div id="start-screen">
+    <h1>Welcome to Whack-A-Mole 🐹</h1>
+    <p>Click 'Start' to play the game and whack as many moles as you can!</p>
+    <button id="start-btn">Start</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-container" style="display: none;">
+    <h1>Whack-A-Mole 🐹</h1>
+    <h2>Score: <span id="score">0</span></h2>
+    <div id="timer">Time Left: 30</div>
+    <div class="grid">
+      <div class="hole" id="hole1"></div>
+      <div class="hole" id="hole2"></div>
+      <div class="hole" id="hole3"></div>
+      <div class="hole" id="hole4"></div>
+      <div class="hole" id="hole5"></div>
+      <div class="hole" id="hole6"></div>
+      <div class="hole" id="hole7"></div>
+      <div class="hole" id="hole8"></div>
+      <div class="hole" id="hole9"></div>
+    </div>
+  </div>
+
+  <!-- End Screen -->
+  <div id="end-screen" style="display: none;">
+    <div id="result-animation"></div>
+    <h2>Game Over!</h2>
+    <p>Your Final Score: <span id="final-score">0</span></p>
+    <p id="result-message"></p>
+    <button id="restart-btn">Play Again</button>
+  </div>
+
+  <audio id="start-music" src="start-music.mp3" loop></audio>
+  <audio id="game-music" src="music/mixkit-game-level-music-689.wav" loop></audio>
+  <audio id="hit-sound" src="music/mixkit-winning-a-coin-video-game-2069.wav"></audio>
+  <audio id="miss-sound" src="music/mixkit-player-jumping-in-a-video-game-2043.wav"></audio>
+  <audio id="score-high" src="music/mixkit-medieval-show-fanfare-announcement-226.wav"></audio>
+  <audio id="score-medium" src="music/mixkit-game-bonus-reached-2065.wav"></audio>
+  <audio id="score-low" src="music/mixkit-player-losing-or-failing-2042.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
