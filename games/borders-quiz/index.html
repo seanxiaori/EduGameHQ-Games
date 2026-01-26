@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Loren Kociko">
+    <meta name="description" content="Borders Quiz">
+    <meta name="keywords" content="quizz, game, borders, countries, educational, study, geography">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="countries.js"></script>
+</head>
+
+<body>
+    <div class="game-panel">
+        <div id="sidebar">
+            <h1>Borders Quiz</h1>
+            <div id="sidebar-sticky">
+                <h2>Round: <span id="round">0</span></h2>
+                <h2>Score: <span id="score">0</span></h2>
+            </div>
+            <div id="btn-div">
+                <input type="button" id="btn-next-round" class="btn" value="Next Country" disabled>
+                <br>
+                <input type="button" id="btn-new-game" class="btn" value="New Round">
+            </div>
+        </div>
+        <div id="my-country">
+            <div id="my-country-flag"></div>
+            <div id="my-country-name"></div>
+        </div>
+        <div id="progress-div">
+            <progress id="progress"></progress>
+        </div>
+        <div class="neighbours-area">
+            <div id="neighbours-panel"></div>
+            <div id="cover-neighbours-panel">
+                <div id="covermsg"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./index.js">
+</script>
+
+</html>
