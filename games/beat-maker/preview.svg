@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#2d3436"/>
+  <text x="200" y="60" font-family="Arial" font-size="24" fill="#fd79a8" text-anchor="middle">🎵 BEAT MAKER</text>
+  <rect x="60" y="100" width="40" height="60" rx="4" fill="#00cec9"/>
+  <rect x="120" y="100" width="40" height="80" rx="4" fill="#0984e3"/>
+  <rect x="180" y="100" width="40" height="50" rx="4" fill="#6c5ce7"/>
+  <rect x="240" y="100" width="40" height="90" rx="4" fill="#e17055"/>
+  <rect x="300" y="100" width="40" height="70" rx="4" fill="#fdcb6e"/>
+  <text x="200" y="250" font-family="Arial" font-size="16" fill="#b2bec3" text-anchor="middle">Create Your Own Music</text>
+</svg>

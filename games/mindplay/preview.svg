@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#6c5ce7"/>
+  <text x="200" y="100" font-family="Arial" font-size="48" fill="#fff" text-anchor="middle">🧠</text>
+  <text x="200" y="160" font-family="Arial Black" font-size="36" fill="#fff" text-anchor="middle">MindPlay</text>
+  <text x="200" y="220" font-family="Arial" font-size="18" fill="#dfe6e9" text-anchor="middle">Memory Training Game</text>
+</svg>
