@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1e3a5f"/>
+  <text x="200" y="60" font-family="Arial" font-size="24" fill="#f39c12" text-anchor="middle">🏛️ GUESS CAPITALS</text>
+  <text x="200" y="140" font-family="Arial" font-size="36" fill="#ecf0f1" text-anchor="middle">Paris?</text>
+  <text x="200" y="180" font-family="Arial" font-size="36" fill="#ecf0f1" text-anchor="middle">Tokyo?</text>
+  <text x="200" y="220" font-family="Arial" font-size="36" fill="#ecf0f1" text-anchor="middle">Berlin?</text>
+  <text x="200" y="280" font-family="Arial" font-size="16" fill="#bdc3c7" text-anchor="middle">World Capitals Quiz</text>
+</svg>
