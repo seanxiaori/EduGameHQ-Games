@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <rect x="120" y="40" width="160" height="220" rx="12" fill="#16213e"/>
+  <rect x="135" y="55" width="130" height="50" rx="6" fill="#0f3460"/>
+  <text x="250" y="90" font-family="monospace" font-size="28" fill="#00ff88" text-anchor="end">123</text>
+  <rect x="135" y="120" width="28" height="28" rx="4" fill="#e94560"/>
+  <rect x="171" y="120" width="28" height="28" rx="4" fill="#4a4a6a"/>
+  <rect x="207" y="120" width="28" height="28" rx="4" fill="#4a4a6a"/>
+  <rect x="243" y="120" width="28" height="28" rx="4" fill="#e94560"/>
+  <text x="200" y="280" font-family="Arial" font-size="18" fill="#eee" text-anchor="middle">Calculator</text>
+</svg>
