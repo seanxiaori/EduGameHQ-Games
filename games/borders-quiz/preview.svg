@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#2d3436"/>
+  <text x="200" y="60" font-family="Arial" font-size="24" fill="#00b894" text-anchor="middle">🌍 BORDERS QUIZ</text>
+  <ellipse cx="200" cy="160" rx="100" ry="80" fill="none" stroke="#74b9ff" stroke-width="3"/>
+  <path d="M150 140 Q200 100 250 140" fill="none" stroke="#74b9ff" stroke-width="2"/>
+  <path d="M140 180 Q200 220 260 180" fill="none" stroke="#74b9ff" stroke-width="2"/>
+  <text x="200" y="270" font-family="Arial" font-size="16" fill="#dfe6e9" text-anchor="middle">Guess Countries by Borders</text>
+</svg>

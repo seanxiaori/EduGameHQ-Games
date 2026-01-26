@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <text x="200" y="80" font-family="Arial" font-size="24" fill="#e94560" text-anchor="middle">🔐 CRACK THE CODE</text>
+  <rect x="80" y="120" width="60" height="80" rx="8" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+  <rect x="170" y="120" width="60" height="80" rx="8" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+  <rect x="260" y="120" width="60" height="80" rx="8" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+  <text x="110" y="175" font-family="monospace" font-size="40" fill="#0f3460" text-anchor="middle">?</text>
+  <text x="200" y="175" font-family="monospace" font-size="40" fill="#0f3460" text-anchor="middle">?</text>
+  <text x="290" y="175" font-family="monospace" font-size="40" fill="#0f3460" text-anchor="middle">?</text>
+  <text x="200" y="260" font-family="Arial" font-size="16" fill="#eee" text-anchor="middle">Logic Puzzle Game</text>
+</svg>

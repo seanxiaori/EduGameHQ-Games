@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#2c3e50"/>
+  <text x="200" y="100" font-family="Arial" font-size="48" fill="#3498db" text-anchor="middle">1 2 3</text>
+  <text x="200" y="160" font-family="Arial" font-size="48" fill="#e74c3c" text-anchor="middle">4 5 6</text>
+  <text x="200" y="220" font-family="Arial" font-size="48" fill="#2ecc71" text-anchor="middle">7 8 ?</text>
+  <text x="200" y="280" font-family="Arial" font-size="20" fill="#ecf0f1" text-anchor="middle">Puzzle Numbers</text>
+</svg>
