@@ -1,0 +1,100 @@
+body {
+  background-image: url('http://res.cloudinary.com/dqr2mejhc/image/upload/c_scale,w_626/v1497818772/space_back_2_keyyer.png');
+  background-repeat: repeat;
+}
+
+/*header {
+  font-family: 'Bungee Outline', cursive;
+  font-size: 72px;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}*/
+
+canvas {
+    background-image: url('http://res.cloudinary.com/dqr2mejhc/image/upload/c_scale,w_612/v1497818771/canvas_back_qu92rm.png');
+    display: block;
+    background-repeat: repeat;
+    margin: 0 20px;
+}
+
+.pinball-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.score {
+  background-color: #304D5B;
+  width: 230px;
+}
+
+.info {
+  background-color: #304D5B;
+  width: 230px;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.info h1 {
+  color: #D74F43 !important;
+  padding-top: 20px;
+  font-family: 'Bungee Outline', cursive;
+  font-size: 40px;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.info p {
+  font-family: 'helvetica', sans-serif;
+  font-size: 17px;
+}
+
+.info a {
+  color: white;
+}
+
+.info a:visited {
+  color: white;
+}
+
+.info i {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.info i:hover {
+  color: #D74F43;
+}
+
+.score {
+  font-family: 'helvetica', sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  height: 100%;
+}
+
+#test, #high {
+  display: inline;
+}
+
+span {
+  font-size: 17px;
+}
+
+#moon, #mars, #neptune, #mercury, #earth {
+  display: none;
+}
+
+#controls {
+  color: #D74F43;
+}
