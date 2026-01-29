@@ -1,0 +1,41 @@
+.grid-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10%;
+}
+
+.grid-item {
+    padding: 70%;
+    font-size: 100px;
+    text-align: center;
+}
+
+.audio-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+#audio-icon{
+    color: white;
+    font-size: 1.4em;
+}
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    background: radial-gradient(#076739, #222);
+    overflow: hidden;
+}
+
+.moving-zone {
+    position: absolute;
+    top:80%; left:50%;
+    width:300px; height:120px;
+    margin: -60px 0 0 -150px;
+    perspective: 800px;
+}

@@ -1,0 +1,50 @@
+
+
+.card {
+    display: flex;
+    text-align: center;
+    perspective: 150rem;
+    width: 1em;
+    background: none;
+    box-shadow: none;
+    user-select: none;
+}
+
+.card-slide {
+    height: 0.2em;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.card-side {
+    transition: all 0.4s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    object-fit: cover;
+}
+
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.cursor-grab {
+    cursor: grab;
+}
+
+.cursor-default{
+    cursor: default;
+}
+
+.cursor-pointer-loading{
+    cursor: progress;
+}
+
+.cursor-loading{
+    cursor: wait;
+}
