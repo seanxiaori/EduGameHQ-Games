@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/cuttherope-h5dx/sw.js', { scope: '/cuttherope-h5dx/' })})}
